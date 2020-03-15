@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'idea'
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+
+group 'com.zengxhao'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    // mavenCentral()
+    maven {
+        name "aliyun maven"
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+}
+
+dependencies {
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.37.Final'
+}
